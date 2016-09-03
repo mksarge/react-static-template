@@ -1,0 +1,22 @@
+{
+  "name": "react-web",
+  "version": "1.0.0",
+  "description": "personal webpage built with react",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mksarge/react-webpage.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Michael Sargent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mksarge/react-webpage/issues"
+  },
+  "homepage": "https://github.com/mksarge/react-webpage#readme"
+}
