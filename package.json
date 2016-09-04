@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "test": "npm test",
-    "start": "webpack && webpack-dev-server --inline --content-base src/client/public --history-api-fallback",
-    "start:prod": "webpack"
+    "start": "webpack && webpack-dev-server --inline --content-base src/client/public --history-api-fallback"
   },
   "repository": {
     "type": "git",
