@@ -1,8 +1,9 @@
 # react-template
 Basic React app template for future projects.
 
-# install
+### instructions
+Install:
 `npm install`
 
-# build with webpack and run webpack-dev-server
+Build with webpack and run webpack-dev-server:
 `npm start`
