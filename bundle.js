@@ -21529,7 +21529,12 @@
 	      _react2.default.createElement(
 	        'p',
 	        null,
-	        'Content here'
+	        'Content here.'
+	      ),
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        'Footer position is relative on mobile, absolute on desktop.'
 	      )
 	    );
 	  }
@@ -21561,7 +21566,13 @@
 	      _react2.default.createElement(
 	        'p',
 	        null,
-	        'Footer position is relative on mobile, absolute on desktop.'
+	        'Static site rendered with React.See',
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'https://github.com/mksarge/react-static-template', target: '_blank' },
+	          'react-static -template'
+	        ),
+	        'for more examples.'
 	      )
 	    );
 	  }
@@ -21602,7 +21613,7 @@
 
 
 	// module
-	exports.push([module.id, "body{\n    background-color: white;\n}\n\n#header{\n    text-align: center;\n    background-color: lightblue;\n    padding: 20px 0px 20px 0px;\n} #header h1 {\n    padding: 0;\n    margin: 0;\n}\n\n#footer{\n    position:relative;\n    width:100%;\n    bottom:0;\n    text-align: center;\n    color: white;\n    background-color: darkblue;\n} #footer p {\n    padding: 0;\n    margin: 0;\n}\n@media screen and (min-width: 767px) {\n    #footer{\n        position:absolute;\n    }\n}\n\n#content{\n    text-align: center;\n    background-color: lightgrey;\n}", ""]);
+	exports.push([module.id, "body{\n    background-color: white;\n}\n\n#header{\n    text-align: center;\n    background-color: lightblue;\n    padding: 20px 0px 20px 0px;\n} #header h1 {\n    padding: 0;\n    margin: 0;\n}\n\n#footer{\n    position:relative;\n    width:100%;\n    bottom:0;\n    text-align: center;\n    color: white;\n    background-color: darkblue;\n} #footer p {\n    padding: 0;\n    margin: 0;\n} #footer a {\n    color:lightgreen;\n}\n@media screen and (min-width: 767px) {\n    #footer{\n        position:absolute;\n    }\n}\n\n#content{\n    text-align: center;\n    background-color: lightgrey;\n}", ""]);
 
 	// exports
 
