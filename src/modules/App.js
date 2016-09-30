@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Content from './Content'
 import Footer from './Footer'
 
 export default React.createClass({
@@ -7,7 +8,7 @@ export default React.createClass({
     return (
       <div>
         <Header />
-        {this.props.children}
+        <Content />
         <Footer />
       </div>
     )

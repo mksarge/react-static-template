@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "webpack && webpack-dev-server --inline --content-base src/client/public --history-api-fallback"
+    "start": "webpack && webpack-dev-server --inline --content-base . "
   },
   "repository": {
     "type": "git",
