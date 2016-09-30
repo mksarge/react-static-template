@@ -12,4 +12,4 @@ render((
       <IndexRoute component={Content} />
     </Route>
   </Router>
-), document.getElementById('app'))
+), document.getElementById('app'));
