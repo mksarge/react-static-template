@@ -5,22 +5,22 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "npm test",
     "start": "webpack && webpack-dev-server --inline --content-base src/client/public --history-api-fallback"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mksarge/react-webpage"
+    "url": "https://github.com/mksarge/react-template"
   },
   "keywords": [
-    "react"
+    "react",
+    "template"
   ],
   "author": "Michael Sargent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mksarge/react-webpage/issues"
+    "url": "https://github.com/mksarge/react-template/issues"
   },
-  "homepage": "https://github.com/mksarge/react-webpage#readme",
+  "homepage": "https://github.com/mksarge/react-template",
   "dependencies": {
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
