@@ -21566,13 +21566,13 @@
 	      _react2.default.createElement(
 	        'p',
 	        null,
-	        'Static site rendered with React.See',
+	        'Static site rendered with React. See\xA0',
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://github.com/mksarge/react-static-template', target: '_blank' },
 	          'react-static -template'
 	        ),
-	        'for more examples.'
+	        '\xA0for more examples.'
 	      )
 	    );
 	  }
