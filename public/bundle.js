@@ -21570,7 +21570,7 @@
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://github.com/mksarge/react-static-template', target: '_blank' },
-	          'react-static -template'
+	          'react-static-template'
 	        ),
 	        '\xA0for more examples.'
 	      )

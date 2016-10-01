@@ -1,9 +1,9 @@
-# react-template
-Basic React app template for future projects.
+# react-static-template
+Basic static-configured React app template for use with GitHub pages.
 
 ### instructions
 Install:
 `npm install`
 
-Build with webpack and run webpack-dev-server:
+Build with webpack:
 `npm start`
