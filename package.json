@@ -1,26 +1,25 @@
 {
-  "name": "react-web",
+  "name": "react-static-template",
   "version": "1.0.0",
-  "description": "webpage built with react",
-  "main": "index.js",
-  "private": true,
+  "description": "static webpage built with react",
   "scripts": {
     "start": "webpack && webpack-dev-server --inline --content-base ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mksarge/react-template"
+    "url": "https://github.com/mksarge/react-static-template"
   },
   "keywords": [
     "react",
+    "static",
     "template"
   ],
   "author": "Michael Sargent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mksarge/react-template/issues"
+    "url": "https://github.com/mksarge/react-static-template/issues"
   },
-  "homepage": "https://github.com/mksarge/react-template",
+  "homepage": "https://github.com/mksarge/react-static-template",
   "dependencies": {
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
