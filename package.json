@@ -1,37 +1,100 @@
 {
   "name": "react-static-template",
   "version": "1.0.0",
+  "author": "Michael Sargent",
   "description": "static webpage built with react",
-  "scripts": {
-    "start": "webpack && webpack-dev-server --inline --content-base ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mksarge/react-static-template"
-  },
+  "license": "MIT",
   "keywords": [
     "react",
     "static",
     "template"
   ],
-  "author": "Michael Sargent",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mksarge/react-static-template/issues"
+  "repository": {
+    "type": "git",
+    "homepage": "https://github.com/mksarge/react-static-template",
+    "bugs": "https://github.com/mksarge/react-static-template/issues"
   },
-  "homepage": "https://github.com/mksarge/react-static-template",
   "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^3.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
+    "assets-webpack-plugin": "^3.5.0",
+    "autoprefixer": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "browser-sync": "^2.17.5",
+    "connect-history-api-fallback": "^1.3.0",
     "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
+    "pixrem": "^3.0.2",
+    "pleeease-filters": "^3.0.0",
+    "postcss": "^5.2.5",
+    "postcss-calc": "^5.3.1",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-custom-selectors": "^3.0.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^1.1.1",
+    "postcss-media-minmax": "^2.1.2",
+    "postcss-nesting": "^2.3.1",
+    "postcss-selector-matches": "^2.0.5",
+    "postcss-selector-not": "^2.0.0",
+    "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2"
+    "stylelint": "^7.5.0",
+    "stylelint-config-standard": "^14.0.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-1"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        2,
+        {
+          "devDependencies": true
+        }
+      ],
+      "react/jsx-filename-extension": 0
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "string-quotes": "single"
+    }
+  },
+  "scripts": {
+    "eslint": "eslint src run.js webpack.config.js",
+    "stylelint": "stylelint \"public/*.css\"",
+    "lint": "npm run eslint && npm run stylelint",
+    "start": "node run"
   }
 }

@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default React.createClass({
-  render: function () {
-    return (
-      <div id='header' >
-        <h1>Header title</h1>
-      </div>
-    )
-  }
-})
+const Header = () => (
+  <div id="header" >
+    <h1>Header title</h1>
+  </div>
+);
+
+export default Header;

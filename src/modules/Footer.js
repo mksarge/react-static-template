@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export default React.createClass({
-  render: function () {
-    return (
-      <div id='footer' >
-        <p>Static site rendered with React. See&nbsp;
-          <a href='https://github.com/mksarge/react-static-template' target='_blank'>react-static-template</a>
-          &nbsp;for more examples.
-        </p>
-      </div>
-    )
-  }
-})
+const Footer = () => (
+  <div id="footer" >
+    <p>Static site rendered with React. See&nbsp;
+        <a href="https://github.com/mksarge/react-static-template" target="_blank" rel="noopener noreferrer">react-static-template</a>
+      &nbsp;for more examples.
+      </p>
+  </div>
+);
+
+export default Footer;
