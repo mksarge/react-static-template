@@ -97,6 +97,8 @@
     "eslint": "eslint src run.js webpack.config.js",
     "stylelint": "stylelint \"public/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
+    "clean": "node run clean",
+    "build": "node run build",
     "start": "node run"
   }
 }
