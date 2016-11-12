@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const AssetsPlugin = require('assets-webpack-plugin');
 const pkg = require('./package.json');
 
 const isDebug = global.DEBUG === false ? false : !process.argv.includes('--release');
@@ -17,13 +18,15 @@ const config = {
 
   entry: [
     '!!style!css!./public/index.css',
-    '!!babel-loader!./src/index.js',
+    './src/index.js',
   ],
 
   output: {
-    filename: 'bundle.js',
-    path: '/public',
-    publicPath: '/',
+    path: path.resolve(__dirname, './public/dist'),
+    publicPath: '/dist/',
+    filename: isDebug ? '[name].js?[hash]' : '[name].[hash].js',
+    chunkFilename: isDebug ? '[id].js?[chunkhash]' : '[id].[chunkhash].js',
+    sourcePrefix: '  ',
   },
 
   debug: isDebug,
@@ -48,6 +51,13 @@ const config = {
       'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
       __DEV__: isDebug,
     }),
+    // Emit a JSON file with assets paths
+    // https://github.com/sporto/assets-webpack-plugin#options
+    new AssetsPlugin({
+      path: path.resolve(__dirname, './public/dist'),
+      filename: 'assets.json',
+      prettyPrint: true,
+    }),
   ],
 
   module: {
@@ -55,8 +65,8 @@ const config = {
       {
         test: /\.jsx?$/,
         include: [
+          path.resolve(__dirname, './components'),
           path.resolve(__dirname, './src'),
-          './src/modules/',
         ],
         loader: `babel-loader?${JSON.stringify(babelConfig)}`,
       },

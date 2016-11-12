@@ -1,6 +1,16 @@
 /* eslint-disable no-console, global-require, no-plusplus */
 
+const fs = require('fs');
+const del = require('del');
+const ejs = require('ejs');
 const webpack = require('webpack');
+
+const config = {
+  title: '',
+  url: '',
+  project: '',
+  trackingID: '',
+};
 
 const tasks = new Map(); // The collection of automation tasks ('clean', 'build', 'publish', etc.)
 
@@ -13,12 +23,57 @@ function run(task) {
 }
 
 //
+// Clean up the output directory
+// -----------------------------------------------------------------------------
+tasks.set('clean', () => del(['public/dist/*', '!public/dist/.git'], { dot: true }));
+
+//
+// Copy ./index.html into the /public folder
+// -----------------------------------------------------------------------------
+tasks.set('html', () => {
+  const webpackConfig = require('./webpack.config');
+  const assets = JSON.parse(fs.readFileSync('./public/dist/assets.json', 'utf8'));
+  const template = fs.readFileSync('./public/index.ejs', 'utf8');
+  const render = ejs.compile(template, { filename: './public/index.ejs' });
+  const output = render({ debug: webpackConfig.debug, bundle: assets.main.js, config });
+  fs.writeFileSync('./public/index.html', output, 'utf8');
+});
+
+//
+// Bundle JavaScript, CSS and image files with Webpack
+// -----------------------------------------------------------------------------
+tasks.set('bundle', () => {
+  const webpackConfig = require('./webpack.config');
+  return new Promise((resolve, reject) => {
+    webpack(webpackConfig).run((err, stats) => {
+      if (err) {
+        reject(err);
+      } else {
+        console.log(stats.toString(webpackConfig.stats));
+        resolve();
+      }
+    });
+  });
+});
+
+//
+// Build website into a distributable format
+// -----------------------------------------------------------------------------
+tasks.set('build', () => {
+  global.DEBUG = process.argv.includes('--debug') || false;
+  return Promise.resolve()
+    .then(() => run('clean'))
+    .then(() => run('bundle'))
+    .then(() => run('html'));
+});
+
+//
 // Build website and launch it in a browser for testing (default)
 // -----------------------------------------------------------------------------
 tasks.set('start', () => {
   let count = 0;
   global.HMR = !process.argv.includes('--no-hmr'); // Hot Module Replacement (HMR)
-  return new Promise((resolve) => {
+  return run('clean').then(() => new Promise((resolve) => {
     const bs = require('browser-sync').create();
     const webpackConfig = require('./webpack.config');
     const compiler = webpack(webpackConfig);
@@ -26,8 +81,16 @@ tasks.set('start', () => {
     // http://webpack.github.io/docs/webpack-dev-middleware.html
     const webpackDevMiddleware = require('webpack-dev-middleware')(compiler, {
       publicPath: webpackConfig.output.publicPath,
+      stats: webpackConfig.stats,
     });
-    compiler.plugin('done', () => {
+    compiler.plugin('done', (stats) => {
+      // Generate index.html page
+      const bundle = stats.compilation.chunks.find(x => x.name === 'main').files[0];
+      const template = fs.readFileSync('./public/index.ejs', 'utf8');
+      const render = ejs.compile(template, { filename: './public/index.ejs' });
+      const output = render({ debug: true, bundle: `/dist/${bundle}`, config });
+      fs.writeFileSync('./public/index.html', output, 'utf8');
+
       // Launch Browsersync after the initial bundling is complete
       // For more information visit https://browsersync.io/docs/options
       if (++count === 1) {
@@ -45,7 +108,7 @@ tasks.set('start', () => {
         }, resolve);
       }
     });
-  });
+  }));
 });
 
 // Execute the specified task or default one. E.g.: node run build

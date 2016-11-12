@@ -15,3 +15,8 @@ const App = () => (
 );
 
 render((<App />), document.getElementById('app'));
+
+// Enable Hot Module Replacement (HMR)
+if (module.hot) {
+  module.hot.accept();
+}

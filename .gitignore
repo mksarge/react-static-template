@@ -1,2 +1,10 @@
+# Node.js and NPM
 node_modules
+npm-debug.log
+
+# Compiled output
+public/dist
+public/index.html
+
+#VS Code Settings
 .vscode/
