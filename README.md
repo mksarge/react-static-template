@@ -1,4 +1,4 @@
-# react-static-template
+# React Static Template
 
 ### Description
 
