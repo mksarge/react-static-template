@@ -1,8 +1,16 @@
 /* eslint-disable no-undef */
+/* eslint-disable react/no-danger */
 
 import React from 'react';
 import { render } from 'react-dom';
-import App from './App';
+import Layout from '../components/Layout/Layout';
+import md from './index.md';
+
+const App = () => (
+  <Layout title={md.title} >
+    <div dangerouslySetInnerHTML={{ __html: md.html }} />
+  </Layout>
+);
 
 render((<App />), document.getElementById('app'));
 
