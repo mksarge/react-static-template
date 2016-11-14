@@ -1,18 +1,13 @@
 html,
-body {
+body,
+#app {
   min-height: 100% !important;
   height: 100% !important;
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
-  background-color: #282c34;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-}
-
-#app {
-  min-height: 100% !important;
-  height: 100% !important;
 }
 
 a {
@@ -36,82 +31,34 @@ li {
   line-height: 2em;
   padding: 0;
   margin: 0;
+  color: #4c566a;
 }
 
 h1 {
   font-size: 1.8em;
-  color: #a9ee8a;
-}
-
-h1 a {
-  font-weight: bold;
-  color: #a9ee8a;
 }
 
 h2 {
   font-size: 1.5em;
-  color: #56b6c2;
-}
-
-h2 a {
-  color: #56b6c2;
 }
 
 h3 {
   font-size: 1.3em;
-  color: #d0a680;
-}
-
-h3 a {
-  color: #d0a680;
 }
 
 h4 {
   font-size: 1.1em;
-  color: #7af;
-}
-
-h4 a {
-  color: #e06c75;
 }
 
 h5 {
-  display: inline-block;
   font-size: 1em;
-  color: #bfc8da;
-  padding: 0 10px;
-  margin: 10px 4px 0 2px;
-  background: #446;
-  border-radius: 12px;
-}
-
-h5 a {
-  color: #bfc8da;
 }
 
 h6 {
   font-size: 1em;
-  color: #bfc8da;
-}
-
-h6 a {
-  color: #e06c75;
 }
 
 p,
 li {
   font-size: 1em;
-  color: #bfc8da;
-}
-
-p a,
-li a {
-  color: #e06c75;
-}
-
-hr {
-  height: 1px;
-  border: 0;
-  margin: 20px 0;
-  background: #4c566a;
 }

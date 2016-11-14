@@ -1,23 +1,26 @@
 .footer {
-  position: relative;
+  position: absolute;
   width: 100%;
+  height: auto;
   bottom: 0;
-  text-align: center;
-  color: white;
-  background-color: black;
-}
-
-.footer p {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  color: #ddf;
+  text-align: center;
 }
 
+.footer p,
 .footer a {
-  color: lightgreen;
+  font-weight: bold;
+  color: #4c567a;
 }
 
-@media screen and (min-width: 767px) {
-  .footer {
-    position: absolute;
-  }
+.bar {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #4c567a;
+  text-align: center;
 }

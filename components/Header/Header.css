@@ -1,10 +1,10 @@
 .header {
   text-align: center;
-  padding: 20px 0;
-  background-color: black;
+  padding: 10px 0;
+  background-color: #4c567a;
+  background-image: linear-gradient(135deg, #bfc8da, #4c567a);
 }
 
 .header h1 {
-  padding: 0;
-  margin: 0;
+  color: white;
 }
