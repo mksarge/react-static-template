@@ -2,10 +2,11 @@
 
 ### Description
 
-A static React template for pages that need a simple layout and no routing. 
-Webpack and Node.js configuration is borrowed from [react-static-boilerplate][rsb].
+React Static Template is a boilerplate for React apps with a simple one-page layout (no routing)
+and markdown compatibility. The code for the Webpack and Node.js configuration, as well
+as the markdown loader, are borrowed and adapted from [React Static Boilerplate][rsb].
 
-Demo: mksarge.github.io/react-static-template
+Demo: https://mksarge.github.io/react-static-template/
 
 ### Instructions
 
@@ -23,7 +24,7 @@ Production build:
 
 ### License
 
-This source code is licensed under the MIT license found in the [LICENSE.txt][mit] file.
+This source code is licensed under the MIT license found in the [LICENSE.txt][license] file.
 
 [rsb]: <https://github.com/kriasoft/react-static-boilerplate>
-[mit]: <>https://github.com/mksarge/react-static-template/LICENSE.txt
+[license]: <https://github.com/mksarge/react-static-template/blob/master/LICENSE.txt>
