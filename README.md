@@ -1,4 +1,4 @@
-# react-static-template
+# React Static Template
 
 ### Description
 
@@ -16,15 +16,13 @@ Install:
 Lint:
 `npm run lint`
 
-Develop with live reload:
+Build with Webpack + [Hot Module Replacement][hmr]:
 `npm run start`
-
-Production build:
-`npm run build`
 
 ### License
 
 This source code is licensed under the MIT license found in the [LICENSE.txt][license] file.
 
 [rsb]: <https://github.com/kriasoft/react-static-boilerplate>
+[hmr]: <https://webpack.github.io/docs/hot-module-replacement.html>
 [license]: <https://github.com/mksarge/react-static-template/blob/master/LICENSE.txt>
