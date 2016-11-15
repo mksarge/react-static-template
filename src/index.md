@@ -32,5 +32,5 @@ Production build: `npm run build`
 
 Download, clone, or fork React Static Template [on GitHub][rst].
 
-[rsb]: <https:github.com/kriasoft/react-static-boilerplate>
-[rst]: <https:github.com/mksarge/react-static-template>
+[rsb]: <https://github.com/kriasoft/react-static-boilerplate>
+[rst]: <https://github.com/mksarge/react-static-template>
