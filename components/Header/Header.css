@@ -5,6 +5,6 @@
   background-image: linear-gradient(135deg, #bfc8da, #4c76fa);
 }
 
-.header h1 {
+.header h1 a {
   color: white;
 }

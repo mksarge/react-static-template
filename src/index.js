@@ -7,7 +7,7 @@ import Layout from '../components/Layout/Layout';
 import md from './index.md';
 
 const App = () => (
-  <Layout title={md.title} >
+  <Layout title={md.title} link={md.link} >
     <div dangerouslySetInnerHTML={{ __html: md.html }} />
   </Layout>
 );

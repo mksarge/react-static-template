@@ -1,5 +1,6 @@
 ---
 title: React Static Template
+link: https://github.com/mksarge/react-static-template
 ---
 
 <br>
