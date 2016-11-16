@@ -21,22 +21,40 @@ React Static Template is written by and maintained by [Michael Sargent][mksarge]
 
 <hr>
 
+### Download
+
+Download, clone, or fork the project on [GitHub][rst].
+
+<hr>
+
 ### Instructions
 
 Install: `npm install`
 
 Lint: `npm run lint`
 
-Develop with live reload: `npm run start`
+Dev Build with [HMR][hmr]: `npm run start`
 
-Production build: `npm run build`
+Production Build: `npm run build`
 
 <hr>
 
-### Source
+### Deploy to GitHub Pages
 
-Download, clone, or fork [React Static Template][rst] on GitHub.
+1. Make some changes.
+2. `npm run build`
+3. `git checkout gh-pages`
+4. Copy files from `public` into the root folder
+5. Commit and push. (Make sure you have GitHub Pages set to `gh-pages` in the settings!)
 
+<hr>
+
+### License
+
+The source code is licensed under the MIT license found in the [LICENSE.txt][license] file in the root folder of this project.
+
+[mksarge]: <https://github.com/mksarge>
 [rsb]: <https://github.com/kriasoft/react-static-boilerplate>
 [rst]: <https://github.com/mksarge/react-static-template>
-[mksarge]: <https://github.com/mksarge>
+[hmr]: <https://webpack.github.io/docs/hot-module-replacement.html>
+[license]: <https://github.com/mksarge/react-static-template/blob/master/LICENSE.txt>
