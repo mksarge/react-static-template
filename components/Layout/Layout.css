@@ -7,14 +7,8 @@
   position: relative;
   height: auto;
   width: 90%;
-  padding: 15px 5% 60px;
-  margin: 0;
+  max-width: 800px;
+  padding: 15px 5% 100px;
+  margin: 0 auto;
   text-align: left;
-}
-
-@media screen and (min-width: 900px) {
-  .content {
-    width: 800px;
-    margin: 0 auto;
-  }
 }
