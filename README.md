@@ -8,10 +8,6 @@ React Static Template is a boilerplate for React apps that has a simple one-page
 This project is inspired by [React Static Boilerplate][rsb]. The Webpack and Node.js 
 configuration, as well as the markdown loader, is borrowed and adapted from React Static Boilerplate.
 
-React Static Template is a boilerplate for React apps with a simple one-page layout (no routing)
-and markdown compatibility. The code for the Webpack and Node.js configuration, as well
-as the markdown loader, are borrowed and adapted from [React Static Boilerplate][rsb].
-
 Demo: https://mksarge.github.io/react-static-template/
 
 ### Instructions
