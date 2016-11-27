@@ -76,19 +76,6 @@
       "transform-runtime"
     ]
   },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
-    "rules": {
-      "import/no-extraneous-dependencies": [
-        2,
-        {
-          "devDependencies": true
-        }
-      ],
-      "react/jsx-filename-extension": 0
-    }
-  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
@@ -96,7 +83,7 @@
     }
   },
   "scripts": {
-    "eslint": "eslint src run.js webpack.config.js",
+    "eslint": "eslint src/ run.js webpack.config.js",
     "stylelint": "stylelint \"public/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
     "clean": "node run clean",
